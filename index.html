@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Yekari - Alquiler de Brincolin y Eventos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🎈 Eventos Yekari</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#" class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>¡Diversión Garantizada para tus Eventos!</h2>
+            <p>Alquiler de brincolines, inflables y más para hacer de tu fiesta un evento inolvidable</p>
+            <a href="productos.html" class="btn btn-primary">Ver Productos</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>¿Por Qué Elegirnos?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Todos nuestros inflables están certificados y en perfectas condiciones</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Entrega a Domicilio</h3>
+                    <p>Llevamos e instalamos el inflable en tu domicilio</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Para Todas las Edades</h3>
+                    <p>Opciones para niños, adolescentes y adultos</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Precios Accesibles</h3>
+                    <p>Los mejores precios del mercado con excelente calidad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-products">
+        <div class="container">
+            <h2>Productos Más Populares</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="images/brinco1.jpg" alt="Castillo Inflable" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23999%22%3ECastillo Inflable%3C/text%3E%3C/svg%3E'">
+                    <h3>Castillo Inflable Grande</h3>
+                    <p>Perfecto para fiestas infantiles, capacidad de 10 niños</p>
+                    <p class="price">$1,500 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Castillo Inflable Grande', 1500)">Agregar al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/brinco2.jpg" alt="Resbaladilla" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23999%22%3EResbaladilla%3C/text%3E%3C/svg%3E'">
+                    <h3>Resbaladilla Acuática</h3>
+                    <p>Diversión refrescante para el verano</p>
+                    <p class="price">$2,000 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Resbaladilla Acuática', 2000)">Agregar al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="images/brinco3.jpg" alt="Obstacle Course" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23999%22%3EPista de Obstáculos%3C/text%3E%3C/svg%3E'">
+                    <h3>Pista de Obstáculos</h3>
+                    <p>Competencia y diversión para todas las edades</p>
+                    <p class="price">$2,500 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Pista de Obstáculos', 2500)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>¿Listo para tu Evento?</h2>
+            <p>Contáctanos ahora y asegura la disponibilidad para tu fecha</p>
+            <a href="contacto.html" class="btn btn-secondary">Contactar Ahora</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eventos Yekari</h3>
+                    <p>Tu mejor opción en renta de inflables y organización de eventos</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📞 Tel: (555) 123-4567</p>
+                    <p>📧 Email: info@eventosyekari.com</p>
+                    <p>📍 Ciudad de México</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horario</h3>
+                    <p>Lunes - Viernes: 9:00 AM - 7:00 PM</p>
+                    <p>Sábados: 9:00 AM - 5:00 PM</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eventos Yekari. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total">0</span> MXN</h3>
+            </div>
+            <button class="btn btn-primary" onclick="checkout()">Proceder a Reservar</button>
+        </div>
+    </div>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
