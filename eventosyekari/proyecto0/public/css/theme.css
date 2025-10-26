@@ -1,0 +1,1520 @@
+/* Eventos Yekari - Tema Vivido y Extravagante */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores principales vividos */
+  --color-red: #ff6666;
+  --color-orange: #ff3300;
+  --color-orange-bright: #ff6600;
+  --color-yellow: #ffff33;
+  --color-green: #66ff66;
+  --color-cyan: #00ccc0;
+  --color-blue: #099ff0;
+  --color-blue-light: #0ccff0;
+  --color-blue-sky: #0fff33;
+  --color-green-light: #99ff99;
+  /* Verde de acción en formularios/admin distinto al fondo */
+  --color-green-cta: #1fa65a; /* más saturado y oscuro para botones/bordes */
+  --color-cyan-light: #66ffff;
+  --color-cyan-bright: #66ff00;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: var(--color-cyan);
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* Header con colores vividos */
+.site-header {
+  background: var(--color-red);
+  padding: 1rem 2rem;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: headerPulse 3s ease-in-out infinite;
+}
+
+@keyframes headerPulse {
+  0%,
+  100% {
+    box-shadow: 0 8px 32px rgba(255, 102, 102, 0.5);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(102, 255, 102, 0.5);
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.btn-login {
+  background: var(--color-orange) !important;
+  color: #fff !important;
+  padding: 0.7rem 1.5rem !important;
+  border: 3px solid var(--color-yellow);
+  box-shadow: 0 4px 15px rgba(255, 51, 0, 0.5);
+}
+
+.btn-login:hover {
+  background: var(--color-yellow) !important;
+  color: var(--color-orange) !important;
+  transform: scale(1.15) rotate(2deg) !important;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.brand img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid var(--color-yellow);
+  box-shadow: 0 0 20px rgba(255, 255, 51, 0.8);
+}
+
+/* Hero Section - Extravagante */
+/* Fixed hero z-index and positioning for carousel */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 2s ease-in-out;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 51, 0.5);
+  animation: overlayShift 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes overlayShift {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  border: 5px solid var(--color-yellow);
+  box-shadow: 0 0 50px rgba(255, 255, 51, 0.8);
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+  color: #fff;
+  animation: titleGlow 2s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 10px var(--color-yellow));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px var(--color-red));
+  }
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.cta {
+  display: inline-block;
+  background: var(--color-orange);
+  color: #fff;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border: 4px solid var(--color-yellow);
+  box-shadow: 0 8px 25px rgba(255, 51, 0, 0.6);
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cta:hover {
+  transform: scale(1.15) rotate(-3deg);
+  box-shadow: 0 12px 40px rgba(255, 255, 51, 0.8);
+  background: var(--color-green);
+  color: #000;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  margin: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 3rem;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  border: 5px solid var(--color-cyan);
+}
+
+.section-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-red);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: titleBounce 1s ease-in-out;
+}
+
+@keyframes titleBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.section-text {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Services Grid - Colores Extravagantes */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  padding: 2rem;
+  border-radius: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 4px solid;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-1 {
+  background: var(--color-red);
+  border-color: var(--color-yellow);
+  color: #fff;
+}
+
+.card-2 {
+  background: var(--color-yellow);
+  border-color: var(--color-blue);
+  color: #000;
+}
+
+.card-3 {
+  background: var(--color-blue);
+  border-color: var(--color-green);
+  color: #fff;
+}
+
+.service-card:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: iconBounce 2s ease-in-out infinite;
+}
+
+@keyframes iconBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.service-card strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Added styling for history content */
+.history-content {
+  text-align: left;
+  line-height: 1.9;
+}
+
+.history-content p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 4rem 2rem;
+  background: var(--color-cyan-light);
+  margin: 2rem 0;
+}
+
+.t-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 4px solid var(--color-orange);
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 102, 102, 0.5);
+  border-color: var(--color-yellow);
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-green);
+  box-shadow: 0 0 20px rgba(102, 255, 102, 0.6);
+}
+
+.meta {
+  margin-bottom: 0.5rem;
+}
+
+.meta strong {
+  display: block;
+  color: var(--color-red);
+  font-size: 1.2rem;
+}
+
+.meta small {
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+.testimonial p {
+  color: #333;
+  font-style: italic;
+}
+
+/* WhatsApp Float - Vivido */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  background: var(--color-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(102, 255, 102, 0.6);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border: 4px solid var(--color-yellow);
+  animation: whatsappPulse 2s ease-in-out infinite;
+}
+
+@keyframes whatsappPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.25) rotate(15deg);
+  box-shadow: 0 12px 40px rgba(255, 255, 51, 0.8);
+}
+
+.whatsapp-float svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .t-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* New expandable service cards styling */
+.services-grid-new {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card-expandable {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 4px solid;
+}
+
+.card-color-1 {
+  background: var(--color-red);
+  border-color: var(--color-yellow);
+}
+
+.card-color-2 {
+  .testimonial {
+   flex-direction: column;
+   text-align: center;
+  }
+}
+
+/* New expandable service cards styling
+  Estas tarjetas permiten mostrar/ocultar detalles mediante clases (.active)
+  La técnica usa max-height con transición para una animación sencilla.
+*/
+.services-grid-new {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card-expandable {
+  border-radius: 20px;
+  overflow: hidden; /* Importante para ocultar contenido que se colapsa */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 4px solid;
+}
+
+/* Variantes de color para tarjetas expandibles */
+.card-color-1 {
+  background: var(--color-red);
+  border-color: var(--color-yellow);
+}
+
+.card-color-2 {
+  background: var(--color-yellow);
+  border-color: var(--color-blue);
+}
+
+.card-color-3 {
+  background: var(--color-blue);
+  border-color: var(--color-green);
+}
+
+/* Added card-color-4 for the 4th product */
+.card-color-4 {
+  background: var(--color-cyan);
+  border-color: var(--color-orange);
+}
+
+/* Hover simple que eleva la tarjeta */
+.service-card-expandable:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.service-header {
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.service-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustes de color para variantes que usan fondo claro */
+.card-color-2 .service-header h3 {
+  color: #000;
+}
+
+.service-duration {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Ajuste para variante de fondo claro */
+.card-color-2 .service-duration {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.service-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-yellow);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+/* Color diferente para la variante 2 */
+.card-color-2 .service-price {
+  color: var(--color-red);
+}
+
+/* Botón circular que alterna los detalles (se controla con JS añadiendo .active) */
+.toggle-details {
+  background: rgba(255, 255, 255, 0.3);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Variant for dark border on light cards */
+.card-color-2 .toggle-details {
+  color: #000;
+  border-color: #000;
+}
+
+/* Efecto hover del toggle */
+.toggle-details:hover {
+  transform: scale(1.2) rotate(90deg);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Rotación del icono cuando el botón tiene la clase .active */
+.toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+.toggle-details.active .toggle-icon {
+  transform: rotate(45deg); /* Indica cambio de estado (cerrar/abrir) */
+}
+
+/* Contenedor de detalles que se expande/colapsa */
+/* Observación: la transición con max-height es una técnica común, max-height
+  debe ser mayor que la altura esperada del contenido cuando está abierto. */
+.service-details {
+  max-height: 0; /* Oculto por defecto */
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(.2,.9,.2,1), padding 0.35s ease;
+  /* Dejar transparente para que la tarjeta conserve su color al expandir */
+  background: transparent;
+  padding: 0 1.5rem; /* Padding colapsado hasta activación */
+  color: inherit; /* usar el color de la tarjeta */
+}
+
+/* Clase aplicada (desde JS) para mostrar contenido */
+.service-details.active {
+  max-height: 500px; /* Suficiente para contenido típico; ajustar si es necesario */
+  padding: 1.25rem 1.5rem; /* Se restaura el padding al expandir */
+}
+
+.service-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-details li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 1rem;
+}
+
+.service-details li:last-child {
+  border-bottom: none;
+}
+
+.service-details strong {
+  color: var(--color-red);
+}
+
+/* Responsive para new service cards: 3 columnas -> 2 -> 1 según ancho */
+@media (max-width: 1024px) {
+  .services-grid-new {
+   grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+   flex-direction: column;
+   gap: 1rem;
+  }
+
+  .nav {
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 1rem;
+  }
+
+  .hero-content h1 {
+   font-size: 2.5rem;
+  }
+
+  .section-title {
+   font-size: 2rem;
+  }
+
+  .services-grid {
+   grid-template-columns: 1fr;
+  }
+
+  .t-grid {
+   grid-template-columns: 1fr;
+  }
+
+  .testimonial {
+   flex-direction: column;
+   text-align: center;
+  }
+
+  .services-grid-new {
+   grid-template-columns: 1fr; /* Pasa a una columna en móviles */
+  }
+}
+
+/* Fin del tema vivido y extravagante */
+/* Nota: las interacciones (toggle .active, cambio de fondo hero-bg, etc.)
+  deben controlarse desde JavaScript añadiendo/removiendo clases. */
+
+/* ------------------------------------------------------------------ */
+/* Estilos específicos para el catálogo (vista/catalogo.php) y carrito */
+/* ------------------------------------------------------------------ */
+
+/* Catalogo grid - coincide con la paleta y los componentes previos */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tarjeta {
+  padding: 1.6rem;
+  border-radius: 20px;
+  text-align: left;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: 4px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* Ciclo de colores por tarjeta para un aspecto vibrante */
+.tarjeta:nth-child(3n+1) {
+  background: linear-gradient(135deg, var(--color-red), rgba(255,102,102,0.9));
+  border-color: var(--color-yellow);
+}
+
+.tarjeta:nth-child(3n+2) {
+  background: linear-gradient(135deg, var(--color-yellow), rgba(255,255,51,0.95));
+  color: #111;
+  border-color: var(--color-blue);
+}
+
+.tarjeta:nth-child(3n+3) {
+  background: linear-gradient(135deg, var(--color-blue), rgba(9,159,240,0.95));
+  border-color: var(--color-green);
+}
+
+.tarjeta h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.tarjeta p { color: inherit; opacity: 0.95; }
+
+.tarjeta .meta {
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1rem 0;
+  color: rgba(255,255,255,0.95);
+}
+
+.tarjeta form {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tarjeta input[type="number"]{ 
+  width: 70px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  color: inherit;
+  font-weight: 700;
+}
+
+.btn-agregar {
+  background: linear-gradient(180deg, var(--color-orange) 0%, var(--color-orange-bright) 100%);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: 3px solid var(--color-yellow);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255,102,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-agregar:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 14px 35px rgba(255,102,0,0.45); }
+
+/* Carrito: estructura limpia y colores coherentes */
+.cart-wrapper {
+  max-width: 1100px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.98);
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  border: 5px solid var(--color-cyan);
+}
+
+/* Estilos específicos para el formulario de pago dentro del carrito */
+.cart-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.cart-wrapper form label {
+  font-weight: 700;
+  color: #0b2433; /* texto oscuro sobre fondo claro */
+  display: block;
+  font-size: 0.95rem;
+}
+
+.cart-wrapper input[type="text"],
+.cart-wrapper input[type="tel"],
+.cart-wrapper input[type="email"],
+.cart-wrapper input[type="date"],
+.cart-wrapper input[type="time"] {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  border: 2px solid rgba(6,22,28,0.06);
+  background: #fff;
+  color: #0b2433;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(2,18,24,0.04);
+}
+
+.cart-wrapper input::placeholder { color: rgba(11,36,51,0.45); font-weight:500 }
+
+.cart-wrapper .form-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.cart-wrapper .form-row label { flex: 1; }
+
+.cart-wrapper .btn-primary { padding: 0.7rem 1.1rem; font-size: 1rem; border-radius: 12px; }
+
+@media (max-width: 680px) {
+  .cart-wrapper .form-row { flex-direction: column; }
+  .cart-wrapper input[type="text"], .cart-wrapper input[type="tel"] { font-size: 0.95rem; }
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.cart-table th, .cart-table td {
+  padding: 0.9rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.cart-item-title { font-weight: 800; color: var(--color-red); }
+.cart-item-sub { color: #333; opacity: 0.85; }
+
+.cart-actions { display:flex; gap:1rem; align-items:center; }
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--color-cyan) 0%, var(--color-blue-light) 100%);
+  color: #002;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: 3px solid var(--color-green-light);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(12,207,240,0.2);
+}
+
+.btn-danger {
+  background: linear-gradient(180deg, #ff5b5b 0%, #ff2121 100%);
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 10px;
+  border: 3px solid var(--color-yellow);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.cart-summary {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  margin-top:1rem;
+}
+
+.cart-total {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--color-blue);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.12);
+}
+
+/* Auth prompt shown when user is not logged in and tries to checkout */
+.auth-prompt {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(180deg, #ffffff, #fbfbfd);
+  border: 2px solid rgba(6,22,28,0.06);
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(2,18,24,0.06);
+  margin-top: 1rem;
+}
+
+.auth-prompt .auth-icon{
+  width:64px;
+  height:64px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, var(--color-orange), var(--color-orange-bright));
+  box-shadow: 0 8px 20px rgba(255,102,0,0.12);
+  flex:0 0 64px;
+}
+
+.auth-prompt .auth-text h3{
+  margin:0 0 0.25rem 0;
+  font-size:1.15rem;
+  color: #0b2433;
+  font-weight: 900;
+}
+
+.auth-prompt .auth-text p{
+  margin:0;
+  color: #214a54;
+  opacity:0.95;
+  font-size:0.98rem;
+}
+
+.auth-prompt .auth-actions{
+  margin-top:0.5rem;
+  display:flex;
+  gap:0.6rem;
+}
+
+.auth-prompt .auth-actions .btn-primary{ padding:0.55rem 0.9rem; }
+.auth-prompt .auth-actions .btn-login{ padding:0.55rem 0.9rem; }
+
+@media (max-width:680px){
+  .auth-prompt{ flex-direction:column; align-items:flex-start; }
+  .auth-prompt .auth-icon{ margin-bottom:0.4rem; }
+}
+
+/* Make auth prompt buttons small and unobtrusive */
+.auth-prompt{
+  gap:0.75rem;
+  padding:0.75rem 1rem;
+}
+.auth-prompt .auth-icon{
+  width:40px;
+  height:40px;
+  flex:0 0 40px;
+  border-radius:8px;
+  background: rgba(255,255,255,0.06);
+  box-shadow: none;
+}
+.auth-prompt .auth-text h3{ font-size:1rem; margin-bottom:0.2rem; }
+.auth-prompt .auth-text p{ font-size:0.95rem; color: rgba(11,36,51,0.72); margin:0; }
+.auth-prompt .auth-actions{ margin-top:0.4rem; display:flex; gap:0.5rem; }
+
+/* Override heavy button styles inside the auth prompt to make them subtle */
+.auth-prompt .auth-actions a{
+  padding:0.32rem 0.6rem !important;
+  font-size:0.95rem !important;
+  border-radius:8px !important;
+  box-shadow:none !important;
+  border:2px solid rgba(11,36,51,0.06) !important;
+  background: rgba(11,36,51,0.03) !important;
+  color: #0b2433 !important;
+  font-weight:600 !important;
+  text-decoration:none !important;
+}
+
+/* Make "Registrarse" slightly more accentuated but still subtle */
+.auth-prompt .auth-actions a.btn-login{
+  background: transparent !important;
+  border-color: rgba(255,102,0,0.12) !important;
+  color: var(--color-orange) !important;
+}
+
+/* Reduce emphasis of primary button too */
+.auth-prompt .auth-actions a.btn-primary{
+  background: transparent !important;
+  border-color: rgba(12,207,240,0.12) !important;
+  color: #0b2433 !important;
+}
+
+/* New subtle link style used inside auth-prompt to avoid heavy .btn styles */
+.auth-link{
+  display:inline-block;
+  padding:0;
+  margin:0;
+  color: rgba(11,36,51,0.85);
+  text-decoration: underline;
+  font-weight:700;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.auth-link.auth-register{
+  color: var(--color-orange);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255,102,0,0.14);
+  padding-bottom:2px;
+}
+.auth-link:hover{ opacity:0.95; transform:none; }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .catalogo { grid-template-columns: 1fr; }
+  .tarjeta { padding: 1.2rem; }
+  .cart-wrapper { padding: 1rem; }
+  .cart-table th, .cart-table td { padding: 0.6rem 0.4rem; }
+}
+
+/* Tipografía mejorada para detalles (títulos y texto desplegable) */
+.details-title {
+  font-family: 'Poppins', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  line-height: 1;
+  background: linear-gradient(90deg, var(--color-yellow), var(--color-orange));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.details-text {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Arial, sans-serif;
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  opacity: 0.98;
+  transform-origin: top left;
+  animation: fadeSlideIn 320ms ease;
+}
+
+@keyframes fadeSlideIn {
+  from { transform: translateY(6px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Ajustes de contraste para tarjetas claras */
+.card-color-2 .details-title {
+  background: linear-gradient(90deg, var(--color-orange), var(--color-red));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card-color-2 .details-text { color: rgba(0,0,0,0.9); text-shadow: none; }
+
+/* End added styles for catalog and cart */
+
+/* ------------------------------------------------------------------ */
+/* Admin panel styles and recommendations                               */
+/* Recomendaciones:                                                      */
+/* - Paleta: usar amarillo, azul, rojo y verde como colores dominantes.  */
+/* - Sidebar izquierdo con avatar circular (sin foto) usando sombra "cris" */
+/*   (efecto suave, inset + drop shadow) para simular relieve.           */
+/* - Contenido principal con banner de bienvenida y tarjetas (grid).     */
+/* - Mantener buen contraste y accesibilidad (texto oscuro sobre amarillo*/
+/*   y texto claro sobre fondos oscuros).                                  */
+/* - Añadir `redirect` en formularios para volver al mismo fragmento.     */
+/* ------------------------------------------------------------------ */
+
+.admin-dashboard {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 2rem;
+  min-height: calc(100vh - 120px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+}
+
+.admin-sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(255,255,255,0.02));
+  border-radius: 16px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  border: 3px solid rgba(255,255,255,0.04);
+}
+
+.admin-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.06), rgba(0,0,0,0.08));
+  border: 4px solid rgba(255,255,255,0.06);
+  box-shadow: inset 0 -10px 30px rgba(0,0,0,0.25), 0 10px 30px rgba(0,0,0,0.18);
+  color: #fff;
+  font-weight: 800;
+  font-size: 2.2rem;
+}
+
+.admin-avatar .initials {
+  font-size: 2.2rem;
+  color: var(--color-yellow);
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+
+.admin-profile-name {
+  margin-top: 0.9rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+
+.admin-profile-role {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 0.25rem;
+}
+
+.admin-nav {
+  margin-top: 1.4rem;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.admin-nav a {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.18s ease;
+  background: transparent;
+}
+
+.admin-nav a:hover,
+.admin-nav a.active {
+  background: rgba(255,255,255,0.05);
+  transform: translateX(6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+}
+
+.admin-main {
+  flex: 1;
+  padding: 0.5rem 1rem;
+}
+
+.welcome-banner {
+  background: linear-gradient(90deg, var(--color-yellow), var(--color-orange));
+  color: #111;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 800;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  margin-bottom: 1.25rem;
+}
+
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.admin-card {
+  padding: 1.15rem;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  border: 3px solid rgba(255,255,255,0.04);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  color: #fff;
+}
+
+.admin-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.18);
+}
+
+.admin-card .card-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 0.6rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.card-pedidos .card-icon { background: linear-gradient(180deg, var(--color-blue), var(--color-blue-light)); }
+.card-clientes .card-icon { background: linear-gradient(180deg, var(--color-cyan), var(--color-cyan-light)); }
+.card-inventario .card-icon { background: linear-gradient(180deg, var(--color-green), var(--color-green-light)); }
+.card-modificar .card-icon { background: linear-gradient(180deg, var(--color-orange), var(--color-orange-bright)); }
+.card-logout .card-icon { background: linear-gradient(180deg, var(--color-red), rgba(255,102,102,0.9)); }
+
+.admin-card h3 { font-size: 1rem; margin-bottom: 0.4rem; font-weight: 800; }
+.admin-card p { font-size: 0.9rem; color: rgba(255,255,255,0.9); }
+
+/* Responsive: en pantallas pequeñas el sidebar pasa arriba */
+@media (max-width: 900px) {
+  .admin-dashboard { flex-direction: column; padding: 1rem; }
+  .admin-sidebar { width: 100%; flex-direction: row; gap: 1rem; align-items: center; padding: 1rem; }
+  .admin-nav { flex-direction: row; overflow-x: auto; gap: 0.5rem; }
+  .admin-profile-name { display: none; }
+}
+
+/* Small extra: tarjetas grandes dentro del dashboard para la vista principal */
+.admin-panel-large {
+  margin-top: 1rem;
+}
+
+/* Estilos para gestión de servicios en el panel admin */
+#admin-content .services-table, #admin-content table.services-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#admin-content .services-table th, #admin-content .services-table td {
+  padding: 0.85rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  background: rgba(0,0,0,0.02);
+}
+
+#admin-content .services-table thead th {
+  background: linear-gradient(90deg, rgba(0,0,0,0.12), rgba(255,255,255,0.02));
+  color: #fff;
+  font-weight: 800;
+}
+
+#admin-content .service-thumb img {
+  width: 120px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.04);
+}
+
+#admin-content .admin-actions { display:flex; gap:0.6rem; align-items:center; }
+
+/* Formularios de servicio (crear/editar) dentro del panel */
+#admin-content form { max-width:900px; }
+#admin-content form label { display:block; margin-bottom:0.6rem; color:#fff; font-weight:700; }
+#admin-content form input[type="text"],
+#admin-content form input[type="number"],
+#admin-content form input[type="file"],
+#admin-content form textarea {
+  width:100%; padding:0.65rem 0.85rem; border-radius:8px; border:2px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.02); color:#fff; margin-bottom:0.6rem;
+}
+
+#admin-content form input[type="file"] { padding:0.5rem; background:transparent; }
+
+#admin-content .admin-btn { font-size:0.95rem; padding:0.6rem 0.9rem; }
+
+/* Acciones de tabla: botones más compactos */
+#admin-content .admin-actions .admin-btn-primary, #admin-content .admin-actions .admin-btn-danger {
+  padding:0.45rem 0.7rem; font-size:0.88rem;
+}
+
+/* Mensaje de éxito/error dentro del admin para servicios */
+.admin-message.success { background: linear-gradient(90deg, rgba(102,255,102,0.95), rgba(51,204,102,0.95)); color:#022; }
+.admin-message.error { background: linear-gradient(90deg, rgba(255,102,102,0.95), rgba(255,51,51,0.95)); color:#fff; }
+
+/* Estilos para file input personalizado en admin */
+.file-input-wrapper {
+  display:flex;
+  gap:0.6rem;
+  align-items:center;
+  margin-bottom:0.6rem;
+}
+.file-input-button {
+  display:inline-flex;
+  align-items:center;
+  gap:0.6rem;
+  padding:0.6rem 0.9rem;
+  background: linear-gradient(180deg, var(--color-orange) 0%, var(--color-orange-bright) 100%);
+  color:#111;
+  font-weight:800;
+  border-radius:10px;
+  cursor:pointer;
+  border:3px solid var(--color-yellow);
+  box-shadow:0 8px 30px rgba(255,102,0,0.15);
+}
+.file-input-button:hover{ transform:translateY(-3px); }
+.file-input-button input[type="file"]{ display:none; }
+.file-input-filename{
+  color: rgba(255,255,255,0.9);
+  font-weight:700;
+  background: rgba(0,0,0,0.04);
+  padding:0.45rem 0.6rem;
+  border-radius:8px;
+  font-size:0.95rem;
+  max-width:420px;
+  overflow:hidden; white-space:nowrap; text-overflow:ellipsis;
+}
+
+
+/* Fin estilos admin */
+
+/* ------------------------------------------------------------------ */
+/* Estilos para el contenido cargado en el panel (tablas, formularios)  */
+/* Estos estilos se aplican dentro de #admin-content para mantener scope. */
+/* ------------------------------------------------------------------ */
+
+#admin-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#admin-content th, #admin-content td {
+  padding: 0.9rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+#admin-content th {
+  background: linear-gradient(90deg, rgba(0,0,0,0.12), rgba(255,255,255,0.02));
+  color: #fff;
+  font-weight: 800;
+}
+
+#admin-content tr:nth-child(even) td {
+  background: rgba(0,0,0,0.03);
+}
+
+#admin-content .admin-actions { display:flex; gap:0.6rem; align-items:center; }
+
+#admin-content .admin-actions .btn-primary, #admin-content .admin-actions .btn-danger {
+  padding: 0.45rem 0.8rem; font-size:0.95rem;
+}
+
+/* Forms inside admin content */
+#admin-content form {
+  background: rgba(0,0,0,0.02);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.03);
+  margin-bottom: 1rem;
+}
+
+#admin-content label { display:block; margin-bottom:0.45rem; color: #fff; font-weight:700; }
+#admin-content input[type="text"], #admin-content input[type="email"], #admin-content input[type="date"], #admin-content input[type="number"], #admin-content textarea, #admin-content select {
+  width:100%; padding:0.6rem 0.8rem; border-radius:8px; border:2px solid rgba(0,0,0,0.08); background: rgba(255,255,255,0.02); color:#fff; margin-bottom:0.6rem;
+}
+
+#admin-content input[type="submit"], #admin-content .btn-primary, #admin-content .btn-danger {
+  cursor:pointer;
+}
+
+/* Message box for feedback (m=...) */
+.admin-message {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  color: #111;
+  background: linear-gradient(90deg, rgba(255,255,51,0.95), rgba(255,102,0,0.95));
+}
+
+/* Make admin-card anchors look consistent */
+a.admin-card { text-decoration: none; display: block; }
+a.admin-card .card-icon { box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
+a.admin-card:hover { text-decoration: none; }
+
+/* Títulos y tipografía dentro del panel: usar gradiente similar a las tarjetas */
+#admin-content h1, #admin-content h2, #admin-content h3 {
+  font-family: 'Poppins', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  background: linear-gradient(90deg, var(--color-yellow), var(--color-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Botones bonitos para formularios en admin */
+.admin-btn{
+  display:inline-block;
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  font-weight:800;
+  border: 3px solid transparent;
+  transition: all 0.18s ease;
+}
+.admin-btn:hover{ transform: translateY(-3px); }
+
+.admin-btn-primary{
+  background: linear-gradient(180deg, var(--color-cyan) 0%, var(--color-blue-light) 100%);
+  color: #012;
+  border-color: var(--color-green-cta);
+  box-shadow: 0 8px 30px rgba(31,166,90,0.12);
+}
+
+.admin-btn-accent{
+  background: linear-gradient(90deg, var(--color-orange), var(--color-orange-bright));
+  color: #111;
+  border-color: var(--color-yellow);
+  box-shadow: 0 8px 30px rgba(255,102,0,0.18);
+}
+
+.admin-btn-danger{
+  background: linear-gradient(180deg, #ff5b5b 0%, #ff2121 100%);
+  color: #fff;
+  border-color: var(--color-red);
+  box-shadow: 0 8px 30px rgba(255,0,0,0.12);
+}
+
+/* Aplicar por defecto a los submit en admin content si no tienen clase */
+/* Estilo por defecto para submit dentro del panel admin: bordes y acento en verde CTA */
+#admin-content input[type="submit"]{
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  font-weight:800;
+  border: 3px solid var(--color-green-cta);
+  background: linear-gradient(180deg, var(--color-cyan) 0%, var(--color-blue-light) 100%);
+  color: #012;
+}
+
+/* Animaciones y estilo para tarjetas de pedido (list_orders) */
+.order-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 420ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+/* Stagger usando nth-child para darle ritmo a la entrada */
+.order-card:nth-child(1){ animation-delay: 0.04s; }
+.order-card:nth-child(2){ animation-delay: 0.08s; }
+.order-card:nth-child(3){ animation-delay: 0.12s; }
+.order-card:nth-child(4){ animation-delay: 0.16s; }
+.order-card:nth-child(5){ animation-delay: 0.20s; }
+.order-card:nth-child(6){ animation-delay: 0.24s; }
+.order-card:nth-child(7){ animation-delay: 0.28s; }
+.order-card:nth-child(8){ animation-delay: 0.32s; }
+.order-card:nth-child(9){ animation-delay: 0.36s; }
+.order-card:nth-child(10){ animation-delay: 0.40s; }
+
+@keyframes fadeUp{
+  from { opacity: 0; transform: translateY(12px) scale(0.995); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* focus accesible */
+#admin-content input:focus, #admin-content select:focus, #admin-content textarea:focus {
+  outline: 3px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
