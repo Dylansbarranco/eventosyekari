@@ -1,11 +1,13 @@
 // Product Filter Functionality
-function filterProducts(category) {
+function filterProducts(category, clickedButton) {
     const products = document.querySelectorAll('.product-card');
     const buttons = document.querySelectorAll('.filter-btn');
     
     // Update active button
     buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+    }
     
     // Filter products
     products.forEach(product => {
@@ -17,7 +19,8 @@ function filterProducts(category) {
             }, 10);
         } else {
             const productCategories = product.getAttribute('data-category');
-            if (productCategories && productCategories.includes(category)) {
+            const categoriesArray = productCategories ? productCategories.split(' ') : [];
+            if (categoriesArray.includes(category)) {
                 product.style.display = 'block';
                 setTimeout(() => {
                     product.style.opacity = '1';
