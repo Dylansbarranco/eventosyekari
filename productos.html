@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Eventos Yekari</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🎈 Eventos Yekari</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" class="active">Productos</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#" class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Nuestros Productos</h1>
+            <p>Amplia variedad de inflables y entretenimiento para tu evento</p>
+        </div>
+    </section>
+
+    <section class="products-catalog">
+        <div class="container">
+            <div class="filter-section">
+                <h3>Categorías</h3>
+                <button class="filter-btn active" onclick="filterProducts('all')">Todos</button>
+                <button class="filter-btn" onclick="filterProducts('castillos')">Castillos</button>
+                <button class="filter-btn" onclick="filterProducts('resbaladillas')">Resbaladillas</button>
+                <button class="filter-btn" onclick="filterProducts('obstaculos')">Obstáculos</button>
+                <button class="filter-btn" onclick="filterProducts('acuaticos')">Acuáticos</button>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-category="castillos">
+                    <img src="images/castillo1.jpg" alt="Castillo Pequeño" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ffcccb%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3ECastillo Pequeño%3C/text%3E%3C/svg%3E'">
+                    <h3>Castillo Inflable Pequeño</h3>
+                    <p>Ideal para espacios reducidos, capacidad de 6 niños</p>
+                    <p class="price">$1,200 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Castillo Inflable Pequeño', 1200)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="castillos">
+                    <img src="images/castillo2.jpg" alt="Castillo Grande" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ffcccb%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3ECastillo Grande%3C/text%3E%3C/svg%3E'">
+                    <h3>Castillo Inflable Grande</h3>
+                    <p>Perfecto para fiestas infantiles, capacidad de 10 niños</p>
+                    <p class="price">$1,500 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Castillo Inflable Grande', 1500)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="castillos">
+                    <img src="images/castillo3.jpg" alt="Castillo Premium" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ffcccb%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3ECastillo Premium%3C/text%3E%3C/svg%3E'">
+                    <h3>Castillo Inflable Premium</h3>
+                    <p>Mega castillo con múltiples áreas de juego</p>
+                    <p class="price">$2,200 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Castillo Inflable Premium', 2200)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="resbaladillas">
+                    <img src="images/resbaladilla1.jpg" alt="Resbaladilla Simple" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23add8e6%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3EResbaladilla Simple%3C/text%3E%3C/svg%3E'">
+                    <h3>Resbaladilla Simple</h3>
+                    <p>Resbaladilla de altura media para niños</p>
+                    <p class="price">$1,300 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Resbaladilla Simple', 1300)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="resbaladillas acuaticos">
+                    <img src="images/resbaladilla2.jpg" alt="Resbaladilla Acuática" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23add8e6%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3EResbaladilla Acuática%3C/text%3E%3C/svg%3E'">
+                    <h3>Resbaladilla Acuática</h3>
+                    <p>Diversión refrescante para el verano</p>
+                    <p class="price">$2,000 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Resbaladilla Acuática', 2000)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="resbaladillas">
+                    <img src="images/resbaladilla3.jpg" alt="Resbaladilla Gigante" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23add8e6%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3EResbaladilla Gigante%3C/text%3E%3C/svg%3E'">
+                    <h3>Resbaladilla Gigante</h3>
+                    <p>La más alta y emocionante, para valientes</p>
+                    <p class="price">$2,800 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Resbaladilla Gigante', 2800)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="obstaculos">
+                    <img src="images/obstaculos1.jpg" alt="Pista Básica" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ffeb3b%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3EPista Básica%3C/text%3E%3C/svg%3E'">
+                    <h3>Pista de Obstáculos Básica</h3>
+                    <p>Recorrido con obstáculos divertidos</p>
+                    <p class="price">$1,800 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Pista de Obstáculos Básica', 1800)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="obstaculos">
+                    <img src="images/obstaculos2.jpg" alt="Pista Profesional" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ffeb3b%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3EPista Profesional%3C/text%3E%3C/svg%3E'">
+                    <h3>Pista de Obstáculos Profesional</h3>
+                    <p>Competencia y diversión para todas las edades</p>
+                    <p class="price">$2,500 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Pista de Obstáculos Profesional', 2500)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="acuaticos">
+                    <img src="images/alberca.jpg" alt="Alberca Inflable" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%2387ceeb%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3EAlberca Inflable%3C/text%3E%3C/svg%3E'">
+                    <h3>Alberca Inflable</h3>
+                    <p>Alberca grande para refrescarse en verano</p>
+                    <p class="price">$1,500 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Alberca Inflable', 1500)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="acuaticos">
+                    <img src="images/tobogan_agua.jpg" alt="Tobogán con Alberca" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%2387ceeb%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3ETobogán con Alberca%3C/text%3E%3C/svg%3E'">
+                    <h3>Tobogán con Alberca</h3>
+                    <p>Combinación perfecta de tobogán y alberca</p>
+                    <p class="price">$3,000 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Tobogán con Alberca', 3000)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="castillos">
+                    <img src="images/combo.jpg" alt="Combo Fiesta" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ffa07a%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3ECombo Fiesta%3C/text%3E%3C/svg%3E'">
+                    <h3>Combo Fiesta Completo</h3>
+                    <p>Castillo + Resbaladilla + Decoración</p>
+                    <p class="price">$3,500 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Combo Fiesta Completo', 3500)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product-card" data-category="obstaculos">
+                    <img src="images/ninja.jpg" alt="Carrera Ninja" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%23ffeb3b%22 width=%22300%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23333%22%3ECarrera Ninja%3C/text%3E%3C/svg%3E'">
+                    <h3>Carrera Estilo Ninja</h3>
+                    <p>Pista de obstáculos extrema para competencias</p>
+                    <p class="price">$3,200 MXN/día</p>
+                    <button class="btn btn-add-cart" onclick="addToCart('Carrera Estilo Ninja', 3200)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eventos Yekari</h3>
+                    <p>Tu mejor opción en renta de inflables y organización de eventos</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📞 Tel: (555) 123-4567</p>
+                    <p>📧 Email: info@eventosyekari.com</p>
+                    <p>📍 Ciudad de México</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horario</h3>
+                    <p>Lunes - Viernes: 9:00 AM - 7:00 PM</p>
+                    <p>Sábados: 9:00 AM - 5:00 PM</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eventos Yekari. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total">0</span> MXN</h3>
+            </div>
+            <button class="btn btn-primary" onclick="checkout()">Proceder a Reservar</button>
+        </div>
+    </div>
+
+    <script src="js/cart.js"></script>
+    <script src="js/filter.js"></script>
+</body>
+</html>

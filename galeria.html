@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Eventos Yekari</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🎈 Eventos Yekari</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="galeria.html" class="active">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#" class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Galería de Eventos</h1>
+            <p>Mira algunos de los eventos que hemos organizado</p>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/evento1.jpg" alt="Fiesta Infantil" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23ff6b6b%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22white%22%3EFiesta Infantil%3C/text%3E%3C/svg%3E'">
+                    <div class="gallery-overlay">
+                        <h3>Fiesta Infantil</h3>
+                        <p>Cumpleaños de 5 años</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/evento2.jpg" alt="Evento Escolar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%234ecdc4%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22white%22%3EEvento Escolar%3C/text%3E%3C/svg%3E'">
+                    <div class="gallery-overlay">
+                        <h3>Evento Escolar</h3>
+                        <p>Día del Niño</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/evento3.jpg" alt="Fiesta de Verano" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23ffe66d%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22%23333%22%3EFiesta de Verano%3C/text%3E%3C/svg%3E'">
+                    <div class="gallery-overlay">
+                        <h3>Fiesta de Verano</h3>
+                        <p>Pool Party</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/evento4.jpg" alt="Evento Corporativo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23a8e6cf%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22%23333%22%3EEvento Corporativo%3C/text%3E%3C/svg%3E'">
+                    <div class="gallery-overlay">
+                        <h3>Evento Corporativo</h3>
+                        <p>Team Building</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/evento5.jpg" alt="Fiesta Temática" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23ff9ff3%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22white%22%3EFiesta Temática%3C/text%3E%3C/svg%3E'">
+                    <div class="gallery-overlay">
+                        <h3>Fiesta Temática</h3>
+                        <p>Princesas y Superhéroes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/evento6.jpg" alt="Evento Familiar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23feca57%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22%23333%22%3EEvento Familiar%3C/text%3E%3C/svg%3E'">
+                    <div class="gallery-overlay">
+                        <h3>Evento Familiar</h3>
+                        <p>Reunión Familiar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Excelente servicio, los niños se divirtieron muchísimo. El personal muy amable y profesional."</p>
+                    <h4>- María González</h4>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Los inflables estaban en perfectas condiciones y la instalación fue muy rápida. ¡Definitivamente volveremos a contratar!"</p>
+                    <h4>- Carlos Rodríguez</h4>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Precios muy accesibles y gran variedad de opciones. La fiesta de mi hijo fue todo un éxito."</p>
+                    <h4>- Ana Martínez</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eventos Yekari</h3>
+                    <p>Tu mejor opción en renta de inflables y organización de eventos</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📞 Tel: (555) 123-4567</p>
+                    <p>📧 Email: info@eventosyekari.com</p>
+                    <p>📍 Ciudad de México</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horario</h3>
+                    <p>Lunes - Viernes: 9:00 AM - 7:00 PM</p>
+                    <p>Sábados: 9:00 AM - 5:00 PM</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eventos Yekari. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total">0</span> MXN</h3>
+            </div>
+            <button class="btn btn-primary" onclick="checkout()">Proceder a Reservar</button>
+        </div>
+    </div>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
